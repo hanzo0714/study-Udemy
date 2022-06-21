@@ -51,8 +51,64 @@
  val4.address = "石川県";
  console.log(val4);
  */
-//constで定義した配列はプロパティの変更が可能（追加もできる）
+/**
+ //constで定義した配列はプロパティの変更が可能（追加もできる）
 const val5 = ["dog", "cat"];
 val5[0] = "bird";
 val5.push("monkey");
 console.log(val5);
+ */
+
+/**
+//アロー関数
+//従来の関数
+function func1(str) {
+   return str;
+}
+console.log(func1("func1です"));
+
+const func2 = function(str) {
+  return str;
+}
+console.log(func2("func2です"));
+
+//アロー関数
+const func3 = (str) => {
+  return str;
+}
+console.log(func3("func3です"));
+
+const func4 = (str) => str;
+console.log(func4("func4です"));
+
+
+const func5 = (num1, num2) => {
+  return num1+ num2;
+}
+console.log(func5(10,20));
+*/
+
+//分割代入(オブジェクト)
+const myProfile = {
+  name: "絆造",
+  age: 15
+};
+//分割代入を用いない方法
+const message1 = `私の名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+console.log(message1);
+//分割代入を用いた方法（変数名が長い時、オブジェクトから複数のプロパティを抜き出す時コードが見やすくなる）
+const { name, age } = myProfile;
+const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message2);
+
+/**
+//分割代入（配列）
+//分割代入を用いない方法
+const myProfile = ['絆造', 15];
+const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+console.log(message3);
+//分割代入を用いた方法
+const [name, age] = myProfile;
+const message4 = `名前は${name}です。年齢は${age}歳です。`;
+console.log(message4);
+ */
